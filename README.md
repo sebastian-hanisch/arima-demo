@@ -1,5 +1,7 @@
 # 🧩 ARIMA – Modelle aus Bausteinen
 
+**[→ Demo live ausprobieren](https://sebastianhanisch-arima-demo.streamlit.app/)**
+
 Drittes Stück der **Zeitreihen-Prognose-Linie** der "Konzepte"-Reihe im Portfolio von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning – und der **Kontrast** zur [Exponentiellen Glättung](https://github.com/sebastian-hanisch/exponential-smoothing-demo) (gleicher Zweck, andere Bauweise).
 Geplant sind acht weitere Stücke (Dynamische Regression, Croston-Verfahren, Boosting, Prognoseintervalle, Hierarchische Abstimmung, Kombination, Prognose → Bestand, ein vortrainiertes Netz; noch nicht gebaut).
 

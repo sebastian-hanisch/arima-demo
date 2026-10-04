@@ -3,7 +3,7 @@
 **[→ Demo live ausprobieren](https://sebastianhanisch-arima-demo.streamlit.app/)**
 
 Drittes Stück der **Zeitreihen-Prognose-Linie** der "Konzepte"-Reihe im Portfolio von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning – und der **Kontrast** zur [Exponentiellen Glättung](https://github.com/sebastian-hanisch/exponential-smoothing-demo) (gleicher Zweck, andere Bauweise).
-Geplant sind acht weitere Stücke (Dynamische Regression, Croston-Verfahren, Boosting, Prognoseintervalle, Hierarchische Abstimmung, Kombination, Prognose → Bestand, ein vortrainiertes Netz; noch nicht gebaut).
+Acht weitere Stücke der Linie (Dynamische Regression, Croston-Verfahren, Boosting, Prognoseintervalle, Hierarchische Abstimmung, Kombination, Prognose → Bestand, ein vortrainiertes Netz) sind inzwischen gebaut.
 
 Die Glättung hat feste Bauformen (Niveau, Trend, Saison). **ARIMA** ist ein Baukasten: **Differenzieren** (I), **Autoregression** (AR: der Wert hängt von den letzten Werten ab) und **gleitende Fehler** (MA: er hängt von den letzten Prognosefehlern ab), dazu dieselben Bausteine im Wochentakt (**SARIMA**).
 Die Ordnung $(p,d,q)(P,D,Q)$ wählt man selbst – nach Box und Jenkins aus Autokorrelationen – oder automatisch nach AICc. Die Demo läuft auf **denselben Tagesaufträgen eines Depots** wie die beiden Vorgänger (dieselbe Reihe, im Test auf denselben Fingerabdruck geprüft), im selben Rolling-Origin-Vergleich mit MASE und Orakel-Untergrenze.
@@ -68,10 +68,10 @@ Die Preset-Zeilen sind **Einzelreihen** (Seed 3); belastbar sind die Zeilen übe
 |---|---|---|
 | **Nur die Reihe selbst zählt** | Feiertage und Aktionen sind ARIMA unbekannt; an den Ereignistagen so schlecht wie Holt-Winters und das Wochenmittel, und der Ljung-Box-Test findet die fehlende Erklärung nicht. | Dynamische Regression (geplant) |
 | **Die Ordnung ist bekannt** | Sie muss gewählt werden – von Hand oder nach AICc; bei dieser Reihenlänge wechselt die Wahl von Reihe zu Reihe, kostet aber wenig, weil die Ordnungen fast gleich gut sind. | Glättungsmodelle mit weniger Wahlfreiheit, Kombination (geplant) |
-| **Linear und stationär nach dem Differenzieren** | Trend über $d = 2$ arbeitet am Rand der Umkehrbarkeit (empfindliche Schätzung); nichtlineare Muster oder Regimewechsel bleiben unerklärt. | Boosting (geplant) |
-| **Der Bedarf ist nie null** | Das Log verlangt positive Werte; bei vielen Nullen brechen Log und Differenzieren. | Croston, SBA, TSB (geplant) |
-| **Eine Reihe genügt** | Jedes Depot bekommt seine eigenen Parameter. | Globale Modelle: Boosting, Vortrainiertes Netz (geplant) |
-| **Es gibt eine Punktprognose** | Die Fehlerstreuung σ liefert Intervalle, aber nur unter der Annahme normalverteilter Fehler. | Prognoseintervalle (geplant) |
+| **Linear und stationär nach dem Differenzieren** | Trend über $d = 2$ arbeitet am Rand der Umkehrbarkeit (empfindliche Schätzung); nichtlineare Muster oder Regimewechsel bleiben unerklärt. | Boosting (Stück 6) |
+| **Der Bedarf ist nie null** | Das Log verlangt positive Werte; bei vielen Nullen brechen Log und Differenzieren. | Croston, SBA, TSB (Stück 5) |
+| **Eine Reihe genügt** | Jedes Depot bekommt seine eigenen Parameter. | Globale Modelle: Boosting, Vortrainiertes Netz |
+| **Es gibt eine Punktprognose** | Die Fehlerstreuung σ liefert Intervalle, aber nur unter der Annahme normalverteilter Fehler. | Prognoseintervalle (Stück 7) |
 | **Erzeugte Reihe, zwölf Seeds** | Das Vehikel kennt genau die Muster, die es erzeugt; echte Reihen sind unordentlicher. Die Zahlen gelten für diese Reihen. | – |
 
 ## Tests
@@ -110,3 +110,7 @@ streamlit run app.py
 ```
 
 Gebaut mit Streamlit, Plotly und numpy (Kreuzproben im Test: statsmodels, scipy).
+
+---
+
+Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). Mehr zur Reihe: [Zeitreihen-Prognose: von Naiv bis Vortraining](https://sebastianhanisch.net/konzepte-zeitreihen-prognose.html).

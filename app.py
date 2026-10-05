@@ -314,7 +314,7 @@ st.markdown(
 | Annahme | Was passiert, wenn sie verletzt ist | Wer setzt an |
 |---|---|---|
 | **Nur die Reihe selbst zählt** | Feiertage und Aktionen sind ARIMA unbekannt: an den Ereignistagen so schlecht wie Holt-Winters und das Wochenmittel; der Ljung-Box-Test findet die fehlende Erklärung nicht. | Dynamische Regression (Stück 4) |
-| **Die Ordnung ist bekannt** | Sie muss gewählt werden - von Hand oder nach AICc; bei dieser Reihenlänge wechselt die Wahl von Reihe zu Reihe. | Glättungsmodelle mit weniger Wahlfreiheit (Stück 2), Kombination (Stück 9) |
+| **Die Ordnung ist bekannt** | Sie muss gewählt werden - von Hand oder nach AICc; bei dieser Reihenlänge wechselt die Wahl von Reihe zu Reihe. | Glättungsmodelle mit weniger Wahlfreiheit (Stück 2), Kombination (Stück 10) |
 | **Linear und stationär nach dem Differenzieren** | Trend braucht d = 2 (Optimum am Rand der Umkehrbarkeit, empfindliche Schätzung); nichtlineare Muster oder Regimewechsel bleiben unerklärt. | Boosting (Stück 6) |
 | **Der Bedarf ist nie null** | Das Log verlangt positive Werte; bei vielen Nullen brechen Log und Differenzieren. | Croston, SBA, TSB (Stück 5) |
 | **Eine Reihe genügt** | Jedes Depot bekommt seine eigenen Parameter. | Globale Modelle: Boosting, Vortrainiertes Netz |

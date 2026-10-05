@@ -66,8 +66,8 @@ Die Preset-Zeilen sind **Einzelreihen** (Seed 3); belastbar sind die Zeilen übe
 
 | Annahme | Was passiert, wenn sie verletzt ist | Wer setzt an |
 |---|---|---|
-| **Nur die Reihe selbst zählt** | Feiertage und Aktionen sind ARIMA unbekannt; an den Ereignistagen so schlecht wie Holt-Winters und das Wochenmittel, und der Ljung-Box-Test findet die fehlende Erklärung nicht. | Dynamische Regression (geplant) |
-| **Die Ordnung ist bekannt** | Sie muss gewählt werden – von Hand oder nach AICc; bei dieser Reihenlänge wechselt die Wahl von Reihe zu Reihe, kostet aber wenig, weil die Ordnungen fast gleich gut sind. | Glättungsmodelle mit weniger Wahlfreiheit, Kombination (geplant) |
+| **Nur die Reihe selbst zählt** | Feiertage und Aktionen sind ARIMA unbekannt; an den Ereignistagen so schlecht wie Holt-Winters und das Wochenmittel, und der Ljung-Box-Test findet die fehlende Erklärung nicht. | Dynamische Regression (`dynamic-regression-demo`) |
+| **Die Ordnung ist bekannt** | Sie muss gewählt werden – von Hand oder nach AICc; bei dieser Reihenlänge wechselt die Wahl von Reihe zu Reihe, kostet aber wenig, weil die Ordnungen fast gleich gut sind. | Glättungsmodelle mit weniger Wahlfreiheit, Kombination (`forecast-combination-demo`) |
 | **Linear und stationär nach dem Differenzieren** | Trend über $d = 2$ arbeitet am Rand der Umkehrbarkeit (empfindliche Schätzung); nichtlineare Muster oder Regimewechsel bleiben unerklärt. | Boosting (Stück 6) |
 | **Der Bedarf ist nie null** | Das Log verlangt positive Werte; bei vielen Nullen brechen Log und Differenzieren. | Croston, SBA, TSB (Stück 5) |
 | **Eine Reihe genügt** | Jedes Depot bekommt seine eigenen Parameter. | Globale Modelle: Boosting, Vortrainiertes Netz |

@@ -76,7 +76,7 @@ Die Preset-Zeilen sind **Einzelreihen** (Seed 3); belastbar sind die Zeilen übe
 
 ## Tests
 
-Pytest-Suite (`pytest tests/ -v`, rund anderthalb Minuten, 96 Tests): der Kern von Hand (Polynome, Differenzen, Fehlerrekursion, Sonderfälle), Kreuzprobe gegen statsmodels (sechs Ordnungen, Schätzung, ACF/PACF/Ljung-Box) und scipy (Chi-Quadrat), Schätzung (deterministisch, zulässig, kein Blick in die Zukunft, Wiedererkennung eines simulierten ARMA-Prozesses),
+Pytest-Suite (`pytest tests/ -v`, rund anderthalb Minuten, 101 Tests): der Kern von Hand (Polynome, Differenzen, Fehlerrekursion, Sonderfälle), Kreuzprobe gegen statsmodels (sechs Ordnungen, Schätzung, ACF/PACF/Ljung-Box) und scipy (Chi-Quadrat), Schätzung (deterministisch, zulässig, kein Blick in die Zukunft, Wiedererkennung eines simulierten ARMA-Prozesses),
 Umrechnung Glättung → ARIMA, die Reihe (Fingerabdruck wie in den Vorgängern), Auswertung, Ordnungswahl und Experimentzeilen, Preset- und Permalink-Klemmen, AppTest-Rauchtests (Standard, jedes Preset, automatische Ordnungswahl, Extremwerte, vier Experimente auf Abruf, keine unaufgelösten Platzhalter) und `test_claims.py` (jede Zahl aus diesem README und aus den Preset-Hinweisen; Reihen und Schätzung sind deterministisch, die Bänder großzügiger als die Rundung).
 
 ## Dateistruktur
